@@ -34,7 +34,7 @@ run "yarn add webpack webpack-merge js-yaml path-complete-extname " \
 "extract-text-webpack-plugin node-sass file-loader sass-loader css-loader style-loader " \
 "postcss-loader postcss-cssnext postcss-smart-import resolve-url-loader " \
 "babel-plugin-syntax-dynamic-import babel-plugin-transform-class-properties " \
-"babel-plugin-transform-object-rest-spread"
+"babel-plugin-transform-object-rest-spread dotenv"
 
 puts "Installing dev server for live reloading"
 run "yarn add --dev webpack-dev-server"

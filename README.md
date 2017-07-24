@@ -60,6 +60,7 @@ in which case you may not even need the asset pipeline. This is mostly relevant 
   - [Link sprocket assets](#link-sprocket-assets)
     - [Using helpers](#using-helpers)
     - [Using babel module resolver](#using-babel-module-resolver)
+  - [dotenv](#dotenv)
 - [Extending](#extending)
 - [Deployment](#deployment)
   - [Heroku](#heroku)
@@ -996,6 +997,27 @@ And then within your javascript app code:
 
 import FooImage from 'assets/images/foo-image.png'
 import 'assets/stylesheets/bar'
+```
+
+### dotenv
+
+`.env` configuration files are supported out of the box in Webpacker thanks to
+the [dotenv npm package](https://github.com/motdotla/dotenv).
+If you were already using the [dotenv Ruby gem](https://github.com/bkeepers/dotenv),
+it will work exactly the same in JS!
+
+Let's say you have the following `.env` file in the root of your project:
+
+```
+ANALYTICS_TOKEN=foobar123
+API_URL=http://myapp.dev/api
+```
+
+You can then reference these variables in your javascript app code with
+`process.env`:
+
+```js
+analytics.init(process.env.ANALYTICS_TOKEN)
 ```
 
 ## Extending
